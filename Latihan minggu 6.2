@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int nilai;
+    int kehadiran;
+    
+    cout << "=== PROGRAM PENILAIAN  ===" << endl;
+    cout << "Masukkan nilai ujian (0-100): ";
+    cin >> nilai;
+    cout << "Masukkan persentase kehadiran (%): ";
+    cin >> kehadiran;
+    
+    cout << "\n--- HASIL KELULUSAN ---" << endl;
+    
+    // Nested IF (If di dalam If)
+    if (nilai >= 60) {
+        // Jika nilai memenuhi syarat lulus
+        if (kehadiran >= 75) {
+            cout << "Status: LULUS dengan predikat memuaskan." << endl;
+        } else {
+            cout << "Status: TIDAK LULUS karena kehadiran kurang dari 75%." << endl;
+        }
+    } else {
+        // Jika nilai tidak memenuhi syarat
+        if (kehadiran >= 75) {
+            cout << "Status: TIDAK LULUS karena nilai ujian di bawah standar." << endl;
+        } else {
+            cout << "Status: TIDAK LULUS (Nilai dan kehadiran tidak mencukupi)." << endl;
+        }
+    }
+    
+    return 0;
+}
