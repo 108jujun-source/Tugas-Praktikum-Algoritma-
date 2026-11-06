@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Deklarasi variabel
+    string namaSiswa;
+    double nilaiKeaktifan, nilaiTugas, nilaiUjian;
+    double murniKeaktifan, murniTugas, murniUjian, nilaiAkhir;
+
+    // Layar Masukan
+    cout << "PORGRAM HITUNG NILAI AKHIR" << endl;
+    cout << endl;
+    
+    cout << "Nama Siswa \t: ";
+    getline(cin, namaSiswa);
+    
+    cout << "Nilai Keaktifan \t: ";
+    cin >> nilaiKeaktifan;
+    
+    cout << "Nilai Tugas \t: ";
+    cin >> nilaiTugas;
+    
+    cout << "Nilai ujian \t: ";
+    cin >> nilaiUjian;
+    cout << endl;
+
+    // Perhitungan nilai murni dan nilai akhir
+    murniKeaktifan = nilaiKeaktifan * 0.20;
+    murniTugas     = nilaiTugas * 0.30;
+    murniUjian     = nilaiUjian * 0.50;
+    nilaiAkhir     = murniKeaktifan + murniTugas + murniUjian;
+
+    // Layar Keluaran
+    cout << "Siswa yang bernama " << namaSiswa << endl;
+    cout << "Dengan nilai presentase yang dihasilkan:" << endl;
+    cout << "Nilai Keaktifan * 20% \t: " << murniKeaktifan << endl;
+    cout << "Nilai Tugas * 30% \t: " << murniTugas << endl;
+    cout << "Nilai Ujian * 50% \t: " << murniUjian << endl;
+    cout << endl;
+    cout << "Jadi Siswa yang bernama " << namaSiswa << " Memperoleh nilai akhir sebesar " << nilaiAkhir << endl;
+
+    return 0;
+}
